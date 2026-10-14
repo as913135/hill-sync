@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HillSync — Manali Underground Utility Intelligence</title>
-  
+
   <!-- Inter Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
 
   <!-- Leaflet GIS CSS (Fallback) -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
 
   <!-- HillSync Stylesheet -->
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="icon" type="image/svg+xml" href="assets/hillsync_logo.svg">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="hillsync_logo.svg">
 </head>
+
 <body>
 
   <!-- ==========================================================================
@@ -27,7 +31,8 @@
     <div class="brand-container" onclick="window.app.switchPage('dashboard')">
       <div class="brand-icon-box">
         <!-- Radar Icon -->
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+          stroke-linecap="round" stroke-linejoin="round">
           <path d="M19.07 4.93A10 10 0 0 0 6.99 3.34"></path>
           <path d="M4 6h.01"></path>
           <path d="M2.29 9.62A10 10 0 1 0 21.31 8.35"></path>
@@ -44,19 +49,37 @@
     <!-- Main Navigation Tabs -->
     <nav class="main-nav">
       <button class="nav-link active" data-page="dashboard" onclick="window.app.switchPage('dashboard')">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20v-6M6 20V10M18 20V4"/></svg>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 20v-6M6 20V10M18 20V4" />
+        </svg>
         <span>Dashboard</span>
       </button>
       <button class="nav-link" data-page="map" onclick="window.app.switchPage('map')">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"/><line x1="9" y1="3" x2="9" y2="18"/><line x1="15" y1="6" x2="15" y2="21"/></svg>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21" />
+          <line x1="9" y1="3" x2="9" y2="18" />
+          <line x1="15" y1="6" x2="15" y2="21" />
+        </svg>
         <span>Map &amp; 3D</span>
       </button>
       <button class="nav-link" data-page="reports" onclick="window.app.switchPage('reports')">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z" />
+          <line x1="12" y1="9" x2="12" y2="13" />
+          <line x1="12" y1="17" x2="12.01" y2="17" />
+        </svg>
         <span>Citizen Reports</span>
       </button>
       <button class="nav-link" data-page="records" onclick="window.app.switchPage('records')">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/></svg>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <ellipse cx="12" cy="5" rx="9" ry="3" />
+          <path d="M3 5V19A9 3 0 0 0 21 19V5" />
+          <path d="M3 12A9 3 0 0 0 21 12" />
+        </svg>
         <span>Records</span>
       </button>
     </nav>
@@ -73,7 +96,12 @@
 
       <!-- Primary Action: Report Incident -->
       <button class="btn-report-incident" onclick="window.app.openCommunityReportModal()">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z" />
+          <line x1="12" y1="9" x2="12" y2="13" />
+          <line x1="12" y1="17" x2="12.01" y2="17" />
+        </svg>
         <span>Report incident</span>
       </button>
     </div>
@@ -94,11 +122,15 @@
           Know what's under the road before the JCB arrives.
         </h1>
         <p class="hero-desc">
-          HillSync maps Manali's buried water, sewer and fiber lines in 2D and 3D, scores every segment for failure risk from records, rainfall, slope and citizen reports — so crews inspect the right pipe first. No sensors, no new hardware.
+          HillSync maps Manali's buried water, sewer and fiber lines in 2D and 3D, scores every segment for failure risk
+          from records, rainfall, slope and citizen reports — so crews inspect the right pipe first. No sensors, no new
+          hardware.
         </p>
         <div class="hero-cta-row">
           <button class="btn-hero-primary" onclick="window.app.switchPage('map')">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21" />
+            </svg>
             <span>Open the live map &amp; 3D view</span>
           </button>
           <button class="btn-hero-secondary" onclick="window.app.openCommunityReportModal()">
@@ -109,11 +141,17 @@
 
       <!-- Operational Advisory Banner -->
       <section class="advisory-banner">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2" style="flex-shrink:0; margin-top:2px;">
-          <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2"
+          style="flex-shrink:0; margin-top:2px;">
+          <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z" />
+          <line x1="12" y1="9" x2="12" y2="13" />
+          <line x1="12" y1="17" x2="12.01" y2="17" />
         </svg>
         <p>
-          <strong>Operational advisory — </strong>HillSync calculates failure vulnerability &amp; inspection priority from historical records, rainfall saturation, terrain slope and community reports. It <strong>does not</strong> confirm active leaks or certify site safety. High-risk segments require physical verification with Jal Shakti Vibhag (JSV) / MC Manali / HPSEBL and a municipal excavation permit before mechanical digging.
+          <strong>Operational advisory — </strong>HillSync calculates failure vulnerability &amp; inspection priority
+          from historical records, rainfall saturation, terrain slope and community reports. It <strong>does
+            not</strong> confirm active leaks or certify site safety. High-risk segments require physical verification
+          with Jal Shakti Vibhag (JSV) / MC Manali / HPSEBL and a municipal excavation permit before mechanical digging.
         </p>
       </section>
 
@@ -155,7 +193,8 @@
             <span class="badge">Zero Hardware</span>
           </div>
           <p style="font-size:13px; color:#94a3b8; line-height:1.5; margin-bottom:14px;">
-            Failure risk is scored from existing public records and environmental indices. No IoT sensors or road tearing required.
+            Failure risk is scored from existing public records and environmental indices. No IoT sensors or road
+            tearing required.
           </p>
 
           <div class="factor-list-item">
@@ -214,7 +253,8 @@
             <span class="badge">Government Pilot</span>
           </div>
           <p style="font-size:13px; color:#94a3b8; line-height:1.5; margin-bottom:14px;">
-            A phased, low-risk approach designed to build trust with Himachal municipal bodies before field implementation.
+            A phased, low-risk approach designed to build trust with Himachal municipal bodies before field
+            implementation.
           </p>
 
           <div class="roadmap-step">
@@ -272,11 +312,13 @@
             <span style="width:8px; height:8px; border-radius:50%; background:#06b6d4;"></span>
             <span>Water</span>
           </button>
-          <button class="hud-btn active" id="btn-toggle-sewer" onclick="window.app.toggleUtilityFilter('sewer_gravity')">
+          <button class="hud-btn active" id="btn-toggle-sewer"
+            onclick="window.app.toggleUtilityFilter('sewer_gravity')">
             <span style="width:8px; height:8px; border-radius:50%; background:#10b981;"></span>
             <span>Sewer</span>
           </button>
-          <button class="hud-btn active" id="btn-toggle-cable" onclick="window.app.toggleUtilityFilter('electric_11kv')">
+          <button class="hud-btn active" id="btn-toggle-cable"
+            onclick="window.app.toggleUtilityFilter('electric_11kv')">
             <span style="width:8px; height:8px; border-radius:50%; background:#f59e0b;"></span>
             <span>Cable</span>
           </button>
@@ -317,11 +359,16 @@
       <!-- Floating Bottom-Left: 2D / 3D Mode Switcher -->
       <div class="floating-view-toggle">
         <button id="btn-view-2d" class="view-toggle-btn active" onclick="window.app.setMapViewMode('2d')">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21" />
+          </svg>
           <span>2D Map</span>
         </button>
         <button id="btn-view-3d" class="view-toggle-btn" onclick="window.app.setMapViewMode('3d')">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path
+              d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+          </svg>
           <span>3D Underground</span>
         </button>
       </div>
@@ -338,17 +385,21 @@
       <aside id="map-pipe-panel" class="pipe-detail-panel">
         <div class="panel-header-row">
           <div>
-            <span id="panel-pipe-type" style="font-size:10px; font-family:monospace; text-transform:uppercase; color:#06b6d4;">Water Main</span>
+            <span id="panel-pipe-type"
+              style="font-size:10px; font-family:monospace; text-transform:uppercase; color:#06b6d4;">Water Main</span>
             <h3 id="panel-pipe-name" style="margin-top:2px;">Mall Road Potable Feeder Main</h3>
             <span id="panel-pipe-id" style="font-size:11px; color:#64748b; font-family:monospace;">MNL-WTR-001</span>
           </div>
-          <button onclick="window.app.closePipeDetailPanel()" style="background:none; border:none; color:#94a3b8; font-size:18px; cursor:pointer; padding:4px;">✕</button>
+          <button onclick="window.app.closePipeDetailPanel()"
+            style="background:none; border:none; color:#94a3b8; font-size:18px; cursor:pointer; padding:4px;">✕</button>
         </div>
 
         <!-- Risk Score Card -->
-        <div style="background:#111b27; border:1px solid #1e293b; border-radius:10px; padding:12px; display:flex; align-items:center; justify-content:space-between;">
+        <div
+          style="background:#111b27; border:1px solid #1e293b; border-radius:10px; padding:12px; display:flex; align-items:center; justify-content:space-between;">
           <div>
-            <span style="font-size:10px; color:#94a3b8; text-transform:uppercase; font-family:monospace;">AI Risk Score</span>
+            <span style="font-size:10px; color:#94a3b8; text-transform:uppercase; font-family:monospace;">AI Risk
+              Score</span>
             <div id="panel-risk-score" style="font-size:28px; font-weight:900; color:#ef4444;">84/100</div>
           </div>
           <span id="panel-risk-badge" class="badge-high">HIGH RISK</span>
@@ -383,21 +434,28 @@
         </div>
 
         <!-- Provenance & Verification -->
-        <div style="background:#0b1528; border:1px solid #1e293b; border-radius:10px; padding:12px; font-size:11px; display:flex; flex-direction:column; gap:6px;">
-          <div><span style="color:#64748b;">Data Source: </span><strong id="panel-pipe-source" style="color:#e2e8f0;">Jal Shakti Vibhag Blueprint</strong></div>
-          <div><span style="color:#64748b;">Verification: </span><strong id="panel-pipe-status" style="color:#f59e0b;">Unverified (Legacy Records)</strong></div>
-          <div><span style="color:#64748b;">Authority: </span><strong id="panel-pipe-auth" style="color:#38bdf8;">Jal Shakti Vibhag (IPH)</strong></div>
+        <div
+          style="background:#0b1528; border:1px solid #1e293b; border-radius:10px; padding:12px; font-size:11px; display:flex; flex-direction:column; gap:6px;">
+          <div><span style="color:#64748b;">Data Source: </span><strong id="panel-pipe-source"
+              style="color:#e2e8f0;">Jal Shakti Vibhag Blueprint</strong></div>
+          <div><span style="color:#64748b;">Verification: </span><strong id="panel-pipe-status"
+              style="color:#f59e0b;">Unverified (Legacy Records)</strong></div>
+          <div><span style="color:#64748b;">Authority: </span><strong id="panel-pipe-auth" style="color:#38bdf8;">Jal
+              Shakti Vibhag (IPH)</strong></div>
         </div>
 
         <!-- Pre-Excavation Directive -->
-        <div style="background:rgba(239,68,68,0.1); border:1px solid rgba(239,68,68,0.3); border-radius:10px; padding:12px; font-size:12px; color:#fca5a5; line-height:1.5;">
+        <div
+          style="background:rgba(239,68,68,0.1); border:1px solid rgba(239,68,68,0.3); border-radius:10px; padding:12px; font-size:12px; color:#fca5a5; line-height:1.5;">
           <strong>Pre-Dig Directive:</strong>
           <p id="panel-pipe-directive" style="margin-top:4px;">
-            Mandatory acoustic leak testing required. Mechanical excavation (JCB) prohibited within 1.5m buffer without manual hand potholing.
+            Mandatory acoustic leak testing required. Mechanical excavation (JCB) prohibited within 1.5m buffer without
+            manual hand potholing.
           </p>
         </div>
 
-        <button class="btn-hero-primary" style="padding:10px; font-size:13px; justify-content:center;" onclick="window.print()">
+        <button class="btn-hero-primary" style="padding:10px; font-size:13px; justify-content:center;"
+          onclick="window.print()">
           📄 Print Site Safety Briefing
         </button>
       </aside>
@@ -410,7 +468,8 @@
        ========================================================================== -->
   <main id="page-reports" class="page-view">
     <div class="page-container">
-      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px; flex-wrap:wrap; gap:12px;">
+      <div
+        style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px; flex-wrap:wrap; gap:12px;">
         <div>
           <h2 style="font-size:24px; font-weight:800; color:#f8fafc;">Citizen &amp; Field Crew Reports</h2>
           <p style="font-size:13px; color:#94a3b8; margin-top:4px;">
@@ -443,9 +502,11 @@
 
       <!-- Search & Filter Bar -->
       <div class="table-filter-bar">
-        <input type="text" id="records-search" class="search-input-box" placeholder="Search by name, ID, or material..." oninput="window.app.filterRecordsTable()">
+        <input type="text" id="records-search" class="search-input-box" placeholder="Search by name, ID, or material..."
+          oninput="window.app.filterRecordsTable()">
         <div style="font-size:12px; color:#94a3b8;">
-          Showing <strong id="records-count-text" style="color:#f8fafc;">12</strong> records in <span id="records-town-name">Manali</span>
+          Showing <strong id="records-count-text" style="color:#f8fafc;">12</strong> records in <span
+            id="records-town-name">Manali</span>
         </div>
       </div>
 
@@ -480,7 +541,8 @@
   <footer class="app-footer">
     <div class="footer-content">
       <p>
-        HillSync predicts <span class="highlight">inspection priority</span> from records, rainfall, slope and citizen reports — it never confirms a leak, never grants permits and never certifies site safety.
+        HillSync predicts <span class="highlight">inspection priority</span> from records, rainfall, slope and citizen
+        reports — it never confirms a leak, never grants permits and never certifies site safety.
       </p>
       <p style="margin-top:4px;">
         Prototype · synthetic data · Phase 1 of the trust roadmap · Manali, Himachal Pradesh
@@ -500,7 +562,8 @@
       </div>
       <div class="modal-body">
         <p style="font-size:12px; color:#94a3b8;">
-          30-second ground reporting form. Submissions feed straight into the risk model to adjust nearby pipe vulnerability without sensors.
+          30-second ground reporting form. Submissions feed straight into the risk model to adjust nearby pipe
+          vulnerability without sensors.
         </p>
 
         <div class="form-group">
@@ -515,7 +578,8 @@
 
         <div class="form-group">
           <label class="form-label">Location / Landmark Title</label>
-          <input type="text" id="rep-title" class="form-input" placeholder="e.g. Near Taxi Stand, Mall Road" value="Surface Water Seepage on Mall Road">
+          <input type="text" id="rep-title" class="form-input" placeholder="e.g. Near Taxi Stand, Mall Road"
+            value="Surface Water Seepage on Mall Road">
         </div>
 
         <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
@@ -540,12 +604,14 @@
 
         <div class="form-group">
           <label class="form-label">Observation Details</label>
-          <textarea id="rep-desc" class="form-textarea" rows="3">Clean water bubbling between cobblestones. No rain in the last 24 hours.</textarea>
+          <textarea id="rep-desc" class="form-textarea"
+            rows="3">Clean water bubbling between cobblestones. No rain in the last 24 hours.</textarea>
         </div>
       </div>
       <div class="modal-footer">
         <button class="btn-hero-secondary" onclick="window.app.closeCommunityReportModal()">Cancel</button>
-        <button class="btn-hero-primary" onclick="window.app.submitCommunityReport()">Submit &amp; Update Risk Model</button>
+        <button class="btn-hero-primary" onclick="window.app.submitCommunityReport()">Submit &amp; Update Risk
+          Model</button>
       </div>
     </div>
   </div>
@@ -562,7 +628,8 @@
           Scan subterranean conduits crossing your planned excavation corridor before breaking ground.
         </p>
 
-        <div style="background:#111b27; padding:14px; border-radius:10px; border:1px solid #1e293b; display:grid; grid-template-columns:2fr 1fr 1fr; gap:10px; margin-bottom:12px;">
+        <div
+          style="background:#111b27; padding:14px; border-radius:10px; border:1px solid #1e293b; display:grid; grid-template-columns:2fr 1fr 1fr; gap:10px; margin-bottom:12px;">
           <div class="form-group">
             <label class="form-label">Project / Road Work</label>
             <input type="text" id="dig-project-title" class="form-input" value="Mall Road Drainage Rehabilitation">
@@ -587,7 +654,8 @@
             <input type="number" id="dig-lng" class="form-input" step="0.0001" value="77.1887">
           </div>
           <div style="display:flex; align-items:flex-end;">
-            <button class="btn-hero-primary" style="width:100%; justify-content:center; padding:9px;" onclick="window.app.recalcDigCheck()">
+            <button class="btn-hero-primary" style="width:100%; justify-content:center; padding:9px;"
+              onclick="window.app.recalcDigCheck()">
               Scan Zone
             </button>
           </div>
@@ -615,17 +683,19 @@
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
   <!-- Google Maps JavaScript API with provided Key -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAdYXKzMoO-Ukx0K7xTx8GosxXRYf-f4BM&libraries=places,geometry"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAdYXKzMoO-Ukx0K7xTx8GosxXRYf-f4BM&libraries=places,geometry"></script>
 
   <!-- HillSync Scripts -->
-  <script src="js/data/synthetic_data.js"></script>
-  <script src="js/data/data_generator.js"></script>
-  <script src="js/engine/risk_model.js"></script>
-  <script src="js/engine/dig_safety.js"></script>
-  <script src="js/engine/terrain_3d.js"></script>
-  <script src="js/engine/google_map_gis.js"></script>
-  <script src="js/engine/map_gis.js"></script>
-  <script src="js/app.js"></script>
+  <script src="data/synthetic_data.js"></script>
+  <script src="data/data_generator.js"></script>
+  <script src="engine/risk_model.js"></script>
+  <script src="engine/dig_safety.js"></script>
+  <script src="engine/terrain_3d.js"></script>
+  <script src="engine/google_map_gis.js"></script>
+  <script src="engine/map_gis.js"></script>
+  <script src="app.js"></script>
 
 </body>
+
 </html>
